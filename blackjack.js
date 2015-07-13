@@ -28,6 +28,7 @@ userHand.push(card_3);
 var card_4 = randomDeck.shift();
 houseHand.push(card_4);
 console.log(userHand);
+console.log(houseHand);
 //startGame function | The startGame function will....
 var startGame = function(init){
  var randomDeck = shuffle(pointValueDeck);
@@ -40,12 +41,16 @@ var startGame = function(init){
  var card_4 = randomDeck.shift();
  houseHand.push(card_4);
  console.log(userHand);
+ var addCard = randomDeck.shift()
+ $(userHand).push(addCard);
+ console.log(userHand)
 }
 
 // hitMe function | The hitMe function will take the top card from the shuffled deck and place it into the userHand array
 var hitMe = function(addCard){
- var topCard = randomDeck.shift()
- var addCard = $("#userHand");
+ var addCard = randomDeck.shift()
+ userHand.push(addCard);
+ console.log(userHand)
 
 }
 
@@ -65,9 +70,9 @@ var resetGame = function(clear){
 
 
 
-// The Event listeners for my buttons using Jquery
+// The event listeners for my buttons using Jquery
 $("#hitMe").on("click", function() {
-
+  hitMe();
 });
 
 $("#stay").on("click", function() {
@@ -79,5 +84,5 @@ $("#resetGame").on("click", function() {
 });
 
 $("#startGame").on("click", function() {
-
+  startGame();
 });

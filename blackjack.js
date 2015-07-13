@@ -16,8 +16,20 @@ function shuffle(pointValueDeck){
     return pointValueDeck;
 }
 
-
-// startGame function | The startGame function will....
+var randomDeck = shuffle(pointValueDeck)
+console.log(randomDeck)
+var randomDeck = shuffle(pointValueDeck);
+var card_1 = randomDeck.shift();
+userHand.push(card_1);
+var card_2 = randomDeck.shift();
+houseHand.push(card_2);
+var card_3 = randomDeck.shift();
+userHand.push(card_3);
+var card_4 = randomDeck.shift();
+houseHand.push(card_4);
+console.log(userHand);
+console.log(houseHand);
+//startGame function | The startGame function will....
 var startGame = function(init){
  var randomDeck = shuffle(pointValueDeck);
  var card_1 = randomDeck.shift();
@@ -28,16 +40,17 @@ var startGame = function(init){
  userHand.push(card_3);
  var card_4 = randomDeck.shift();
  houseHand.push(card_4);
- var addCard = randomDeck.shift();
  console.log(userHand);
- console.log(houseHand);
+ var addCard = randomDeck.shift()
+ $(userHand).push(addCard);
+ console.log(userHand)
 }
 
 // hitMe function | The hitMe function will take the top card from the shuffled deck and place it into the userHand array
 var hitMe = function(addCard){
  var addCard = randomDeck.shift()
  userHand.push(addCard);
- console.log(userHand);
+ console.log(userHand)
 
 }
 

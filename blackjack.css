@@ -1,3 +1,27 @@
 body {
     background-color: green;
-} 
+    font-family: 'Oleo Script', cursive, Trebuchet, sans-serif;
+}
+
+.controller {
+  background: #AF3030;
+  color: white;
+  width: 33%;
+  text-align: center;
+  display: inline-block;
+  border: gold;
+  border-width: 20px;
+  padding-top: 5px;
+}
+
+.house_section {
+  display: inline-block;
+
+}
+
+.hitMe {
+  background-color: blue;
+}
+.hitMe:hover{
+  background-color: red;
+}

@@ -15,23 +15,10 @@ function shuffle(pointValueDeck){
     for(var j, x, i = pointValueDeck.length; i; j = Math.floor(Math.random() * i), x = pointValueDeck[--i], pointValueDeck[i] = pointValueDeck[j], pointValueDeck[j] = x);
     return pointValueDeck;
 }
-
-var randomDeck = shuffle(pointValueDeck)
-console.log(randomDeck)
 var randomDeck = shuffle(pointValueDeck);
-var card_1 = randomDeck.shift();
-userHand.push(card_1);
-var card_2 = randomDeck.shift();
-houseHand.push(card_2);
-var card_3 = randomDeck.shift();
-userHand.push(card_3);
-var card_4 = randomDeck.shift();
-houseHand.push(card_4);
-console.log(userHand);
-console.log(houseHand);
+
 //startGame function | The startGame function will....
 var startGame = function(init){
- var randomDeck = shuffle(pointValueDeck);
  var card_1 = randomDeck.shift();
  userHand.push(card_1);
  var card_2 = randomDeck.shift();
@@ -40,17 +27,16 @@ var startGame = function(init){
  userHand.push(card_3);
  var card_4 = randomDeck.shift();
  houseHand.push(card_4);
+
  console.log(userHand);
- var addCard = randomDeck.shift()
- $(userHand).push(addCard);
- console.log(userHand)
+ console.log(houseHand);
 }
 
 // hitMe function | The hitMe function will take the top card from the shuffled deck and place it into the userHand array
 var hitMe = function(addCard){
- var addCard = randomDeck.shift()
+ var addCard = randomDeck.shift();
  userHand.push(addCard);
- console.log(userHand)
+ console.log(userHand);
 
 }
 
@@ -60,10 +46,12 @@ var stay = function(stopGame){
 
 }
 
-//resetGame function | The resetGame function will....
+//resetGame function | The resetGame function will set both the userHand and houseHand to an empty Array
 var resetGame = function(clear){
-
-
+  userHand = [];
+  houseHand = [];
+  console.log(userHand);
+  console.log(houseHand);
 }
 
 
@@ -76,11 +64,11 @@ $("#hitMe").on("click", function() {
 });
 
 $("#stay").on("click", function() {
-
+  stay();
 });
 
 $("#resetGame").on("click", function() {
-
+  resetGame();
 });
 
 $("#startGame").on("click", function() {

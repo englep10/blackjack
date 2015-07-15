@@ -14,14 +14,38 @@ body {
   padding-top: 5px;
 }
 
+
+
+.user_point_value{
+  display: inline-block;
+}
+
+.house_point_value{
+  display: inline-block;
+}
+
 .house_section {
   display: inline-block;
+  position: absolute;
+  padding-left: 20px;
+}
 
+.house_card {
+  height: 126px;
+  width: 80px;
+  background: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.user_card {
+  height: 126px;
+  width: 80px;
+  background: white;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .hitMe {
   background-color: blue;
-}
-.hitMe:hover{
-  background-color: red;
 }

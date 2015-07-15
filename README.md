@@ -14,3 +14,4 @@ Some Failures:
   
 Its a learning process and the next one will always be better than the last. 
   
+You can find my project live here: http://englep10.github.io/blackjack/

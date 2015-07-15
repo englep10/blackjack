@@ -73,6 +73,14 @@ if ( houseValue < 16 && userValue < 21 )
      }
    }
 
+   for(i=2; i < houseHand.length; i++){
+            $(".house_card").append("<div class='house_card" + i + "'>" + houseHand[i] + "</div>");
+          }
+   for(i=2; i < userHand.length; i++){
+            $(".user_card").append("<div class='user_card" + i + "'>" + userHand[i] + "</div>");
+          }
+
+
  console.log(userHand);
  console.log(userValue);
  console.log(houseHand)

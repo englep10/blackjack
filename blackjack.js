@@ -12,6 +12,7 @@ var randomDeck = [];
 
 //shuffle function for use during startGame function
 function shuffle(pointValueDeck){
+  // i would break this up to make it a little bit more readable, not really sure what's going on here
     for(var j, x, i = pointValueDeck.length; i; j = Math.floor(Math.random() * i), x = pointValueDeck[--i], pointValueDeck[i] = pointValueDeck[j], pointValueDeck[j] = x);
     return pointValueDeck;
 }
@@ -19,6 +20,7 @@ var randomDeck = shuffle(pointValueDeck);
 
 //startGame function | The startGame function will....
 var startGame = function(init){
+  // what does the init argument do? I noticed that you don't pass in an argument when you invoke it later
  var card_1 = randomDeck.shift();
  userHand.push(card_1);
  var card_2 = randomDeck.shift();
@@ -124,12 +126,15 @@ var stay = function(stopGame){
     else if (houseValue > 21) {
       alert("The Dealer Busted")
     }
-
+// theres alot of if else conditionals going on in your hitme/stay functionality. Looks like it works
+// there's a slight bug where if you hit after the third card it gives you 2 cards
+// there's some refactoring opportunities here though try consolidating some of this logic
 }
 
 //resetGame function | The resetGame function will set both the userHand and houseHand to an empty Array
 var resetGame = function(clear){
   window.location.reload(false);
+  // the reset game functionality just reloads the page it looks like, can you think of a way we could reset the game without having to refresh the page?
 }
 
 
